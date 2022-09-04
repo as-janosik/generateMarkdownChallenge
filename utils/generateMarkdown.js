@@ -1,8 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-
-  return;
+  //[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+  let lic = ``
+  if (license === 'none'){
+    lic = "";
+  } else {
+   lic = `[![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})`
+  }
+  return lic;
 }
 
 // TODO: Create a function that returns the license link
@@ -22,25 +28,35 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `#${data.title}
-  #Description of Project
+  #License
+  ${renderLicenseBadge(data.license)}
+  This project is using ${data.license} as the license.
+
+  # Table of Contents
+
+1. [Description of Project](#Description-of-Project)
+2. [Installation Instructions](#Installation-Instructions)
+3. [Usage Info](#Usage-Info)
+4. [Contribution Guide](#Contribution-Guide)
+5. [Test Instructions](#Test-Instructions)
+6. [Questions](#Questions)
+
+
+  ##Description of Project
   ${data.description}
-  #Installation Instructions
+  ##Installation Instructions
   ${data.install}
-  #Usage Info
+  ##Usage Info
   ${data.usage_Info}
-  #Contribution Guide
+  ##Contribution Guide
   ${data.contribution_Guide}
-  #Test Instructions
+  ##Test Instructions
   ${data.test_Instructions}
-  #Questions
+  ##Questions
   If you have other questions, feel free to connect via github at:
   https://gist.github.com/${data.username}
   Otherwise you can reach me at the following email:
   ${data.email}
-  #License
-  ${renderLicenseBadge(data.license)}
-  ${renderLicenseLink(data.license)}
-  ${renderLicenseSection(data.license)}
 
 `;
 }
