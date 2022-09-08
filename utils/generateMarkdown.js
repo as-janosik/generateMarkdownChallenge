@@ -27,10 +27,13 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `#${data.title}
-  #License
-  ${renderLicenseBadge(data.license)}
-  This project is using ${data.license} as the license.
+  return `# ${data.title}  
+
+  # License  
+
+  ${renderLicenseBadge(data.license)}  
+
+  This project is using ${data.license} as the license.  
 
   # Table of Contents
 
@@ -42,22 +45,26 @@ function generateMarkdown(data) {
 6. [Questions](#Questions)
 
 
-  ##Description of Project
-  ${data.description}
-  ##Installation Instructions
-  ${data.install}
-  ##Usage Info
-  ${data.usage_Info}
-  ##Contribution Guide
-  ${data.contribution_Guide}
-  ##Test Instructions
-  ${data.test_Instructions}
-  ##Questions
+  ## Description of Project  
+  ${data.description}  
+
+  ## Installation Instructions  
+  ${data.install}  
+
+  ## Usage Info  
+  ${data.usage_Info}  
+
+  ## Contribution Guide  
+  ${data.contribution_Guide}  
+
+  ## Test Instructions  
+  ${data.test_Instructions}  
+
+  ## Questions  
   If you have other questions, feel free to connect via github at:
-  https://gist.github.com/${data.username}
+  https://gist.github.com/${data.username}  
   Otherwise you can reach me at the following email:
   ${data.email}
-
 `;
 }
 
