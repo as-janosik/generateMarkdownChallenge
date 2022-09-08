@@ -68,7 +68,7 @@ function init() {
         .then((response) =>{
             fileContents= genMd(response);
             writeToFile("README.md",fileContents);
-            console.log(fileContents);
+            //console.log(fileContents);
 
             
         })
