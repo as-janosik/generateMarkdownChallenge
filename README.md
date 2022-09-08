@@ -20,7 +20,7 @@
 
 
   ## Description of Project  
-  This Challenge is to create a program that will generate a README from using a question and answer format in the CLI.  This will allow the user of the application to generate a README from answering a few questions.   
+  This Challenge is to create a program that will generate a README from using a question and answer format in the CLI.  This will allow the user of the application to generate a README from answering a few questions.
 
   ## Installation Instructions  
   Will need to download the files from this repo and install npm to ensure you can use inquirer from your CLI  
